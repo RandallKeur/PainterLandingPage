@@ -2,11 +2,14 @@
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (isset($_POST['submit'])) {
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["name"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $message = trim($_POST["massage"]);
+        phone = trim($_POST["phone"]);
+        $message = trim($_POST["message"]);
 
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($subject) OR empty($lname) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -47,9 +50,9 @@
         http_response_code(403);
         echo "There was a problem with your submission, please try again.";
     } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(405);
-        echo "There was a 405.";
+
+            echo "There was a problem.";
+
     }
 
 ?>
