@@ -141,10 +141,13 @@
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Full Name</label>
     <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+   
     <label for="email-address">Email Address</label>
     <input type="email" name="_replyto" id="email-address" placeholder="email@gmail.com" required="">
-          <label for="phone">Phone</label>
-    <input type="phone" name="_replyto" id="phone" placeholder="123-456-7891" required="">
+    
+    <label for="phone">Phone</label>
+    <input type="phone" name="call" id="phone" placeholder="123-456-7891" required="" >
+
     <fieldset id="fs-frm-selects">
       <label for="timely">1. What area are you located in?</label>
       <select name="timely" id="timely" required="">
@@ -166,7 +169,7 @@
       </select>
     </fieldset>
     <label for="message">Additional Comments</label>
-    <textarea rows="3" name="message" id="message" placeholder="Anything else you would like to mention?" required=""></textarea>
+    <textarea rows="3" name="message" id="message" placeholder="Anything else you would like to mention?"></textarea>
     <input type="hidden" name="_subject" id="email-subject" value="Survey Responses">
   </fieldset>
   <input type="submit" value="Send Responses">
