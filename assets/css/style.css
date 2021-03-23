@@ -67,8 +67,10 @@ h1 {
   font-size: 48px; }
 
 h2 {
+  color: #000000;
   font-size: 36px;
-  color: #FFFFFF;   }
+  background-color:#ffffff;
+     }
 
 h3 {
   font-size: 28px; }
