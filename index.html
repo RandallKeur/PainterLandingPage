@@ -241,12 +241,7 @@
     <input type="hidden" name="_subject" id="email-subject" value="Survey Responses">
   </fieldset>
 
-  
-
-  <div class="g-recaptcha" id="captcha" data-sitekey="6LeO0YoaAAAAAJovU_1IG3nnpwc8JUdtwgsmRB-d"></div>
-
-  <br/>
-
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <script>
 
     function get_action(form) 
@@ -266,6 +261,7 @@
     
     </script>
 
+<div class="g-recaptcha" id="captcha" data-sitekey="6LeO0YoaAAAAAJovU_1IG3nnpwc8JUdtwgsmRB-d"></div>
 <span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->
   <input type="submit" value="Submit for a Free Estimate">
 
