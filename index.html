@@ -240,6 +240,22 @@
     <textarea rows="3" name="message" id="message" placeholder="Tell us more about your project!"></textarea>
     <input type="hidden" name="_subject" id="email-subject" value="Survey Responses">
   </fieldset>
+  
+  <html>
+  <head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LeO0YoaAAAAAJovU_1IG3nnpwc8JUdtwgsmRB-d"></div>
+      <br/>
+      <input type="submit" value="Validate">
+    </form>
+  </body>
+  <br/>
+  </html>
+
+  
   <input type="submit" value="Send Responses">
 </form><style>/* reset */
 #fs-frm input,
