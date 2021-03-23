@@ -202,15 +202,6 @@
                 <h4 class="contact-title pb-10"><i class="lni lni-envelope"></i> Get a free <span>estimate. Zero commitment!</span></h4>
                  <p class="text">Our painters have been in business for over 22 Years with 39 years of experience. It does't get better than that!</p>
 
-
-                 <script type="text/javascript">
-                    var onloadCallback = function() {
-                        grecaptcha.render('html_element', {
-                          'sitekey' : '6LeO0YoaAAAAAJovU_1IG3nnpwc8JUdtwgsmRB-d'
-                        });
-                      };
-                  </script>
-                  
 <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/xgerwevo" method="post">
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Full Name</label>
@@ -250,19 +241,31 @@
     <input type="hidden" name="_subject" id="email-subject" value="Survey Responses">
   </fieldset>
 
-  
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script>
 
+    function get_action(form) 
+    {
+        var v = g-recaptcha.getResponse();
+        if(v.length == 0)
+        {
+            document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+            return false;
+        }
+        else
+        {
+             document.getElementById('captcha').innerHTML="Captcha completed";
+            return true; 
+        }
+    }
+    
+    </script>
 
-<!-- <div class="g-recaptcha" id="captcha" data-sitekey="6LeO0YoaAAAAAJovU_1IG3nnpwc8JUdtwgsmRB-d"></div> -->
-
-
-<input type="submit" value="Submit for a Free Estimate">
+<div class="g-recaptcha" id="captcha" data-sitekey="6LeO0YoaAAAAAJovU_1IG3nnpwc8JUdtwgsmRB-d"></div>
+<span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->
+  <input type="submit" value="Submit for a Free Estimate">
 
 </form>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-async defer>
-</script>
-
 
 
 <style>/* reset */
@@ -635,6 +638,9 @@ async defer>
 
     <!--====== PART ENDS ======-->
 
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!--====== Jquery js ======-->
     
