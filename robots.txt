@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /~different/
+Disallow: /checkout/
+Disallow: /icons/
